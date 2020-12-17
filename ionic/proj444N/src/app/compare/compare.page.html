@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>compare</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor='let x of dataSrv.compare; let i=index'>
+        <ion-card>
+          <img src='./assets/icon/{{x.photo}}'/>
+          <ion-card-header>
+          <ion-card-subtitle>Series</ion-card-subtitle>
+          <ion-card-title>{{x.type}}</ion-card-title>
+          <ion-card-subtitle>Display Size</ion-card-subtitle>
+          <ion-card-title>{{x.displaySize}}</ion-card-title>
+          <ion-card-subtitle>Operating System</ion-card-subtitle>
+          <ion-card-title>{{x.os}}</ion-card-title>
+          <ion-card-subtitle>HardDisk</ion-card-subtitle>
+          <ion-card-title>{{x.hard}}</ion-card-title>
+          <ion-card-subtitle>RAM</ion-card-subtitle>
+          <ion-card-title>{{x.ram}}</ion-card-title>
+          <ion-card-subtitle>Price</ion-card-subtitle>
+          <ion-card-title>{{x.price}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content>  
+                <ion-button (click)="addCart(i)" routerLink='/welc'shape="round">
+                  AddToCart
+                </ion-button>
+              </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>

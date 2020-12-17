@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>View</ion-title>
+    <ion-button routerLink='/welc' shape="round">
+      <ion-icon slot="start" name="home"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <!--<ion-card>
+    <img src='{{pros.photo}}'/>
+    <ion-card-header>
+          <ion-card-subtitle>Brand</ion-card-subtitle>
+          <ion-card-title [(ngModel)]='pros.brand'></ion-card-title>
+          <ion-card-subtitle>Series</ion-card-subtitle>
+          <ion-card-title> [(ngModel{{dataSrv.newList.type}}</ion-card-title>
+          <ion-card-subtitle>Display Size</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.displaySize}}</ion-card-title>
+          <ion-card-subtitle>Operating System</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.os}}</ion-card-title>
+          <ion-card-subtitle>Processor Count</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.ProcessorCount}}</ion-card-title>
+          <ion-card-subtitle>HardDisk</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.hard}}</ion-card-title>
+          <ion-card-subtitle>RAM</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.ram}}</ion-card-title>
+          <ion-card-subtitle>Price</ion-card-subtitle>
+          <ion-card-title>{{dataSrv.newList.price}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          
+  <ion-button routerLink='/welc' shape="round">
+    Back
+  </ion-button>
+        </ion-card-content>
+  </ion-card>-->
+  <ion-card>
+    <img src='{{pros.photo}}'/>
+    <ion-card-header>
+      <ion-card-subtitle>Brand</ion-card-subtitle>
+          <ion-card-title>{{pros.brand}}</ion-card-title>
+          <ion-card-subtitle>Series</ion-card-subtitle>
+          <ion-card-title>{{pros.type}}</ion-card-title>
+          <ion-card-subtitle>Display Size</ion-card-subtitle>
+          <ion-card-title>{{pros.disSize}}</ion-card-title>
+          <ion-card-subtitle>Operating System</ion-card-subtitle>
+          <ion-card-title>{{pros.os}}</ion-card-title>
+          <ion-card-subtitle>Processor Count</ion-card-subtitle>
+          <ion-card-title>{{pros.pc}}</ion-card-title>
+          <ion-card-subtitle>HardDisk</ion-card-subtitle>
+          <ion-card-title>{{pros.hard}}</ion-card-title>
+          <ion-card-subtitle>RAM</ion-card-subtitle>
+          <ion-card-title>{{pros.ram}}</ion-card-title>
+          <ion-card-subtitle>Price</ion-card-subtitle>
+          <ion-card-title>{{pros.price}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button routerLink='/welc' shape="round">
+        Back
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

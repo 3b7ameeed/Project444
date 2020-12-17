@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>REGISTER</ion-title>
+    <ion-button routerLink='/' shape="round">
+      <ion-icon slot="start" name="home"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--<ion-content>
+  <div class="ion-text-end">
+    <h3 style="text-align: left; font-family: fantasy;">Register</h3>
+  </div>
+<br>
+<br>
+<form [formGroup]="regForm" (ngSubmit)="reg(regForm.value)">
+  <ion-item>
+    <ion-label floating>First Name <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="firstName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Last Name <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="lastName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>User Name <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="userName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>E-Mail <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Password <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="password" type="text"></ion-input>
+  </ion-item>
+  <ion-button block color="primary" type="submit" (click)="regg(regForm.value)">
+    Register
+  </ion-button>
+  <ion-button block color="primary" type="submit" (click)="addUser(regForm.value)">
+    Login
+  </ion-button>
+</form>
+-->
+<ion-content>
+<ion-item>
+  <ion-label>FirstName:</ion-label>
+  <ion-input type="text" [(ngModel)]='user.fn'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>LastName:</ion-label>
+  <ion-input type="text"[(ngModel)]='user.ln'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>UserName:</ion-label>
+  <ion-input type="text" [(ngModel)]='user.un'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label> Gender </ion-label>
+  <ion-select [(ngModel)]="user.gender">
+  <ion-select-option >Male</ion-select-option>
+  <ion-select-option >Female</ion-select-option>
+  </ion-select>
+  </ion-item>
+  <br>
+<ion-item>
+  <ion-label>Email:</ion-label>
+  <ion-input type="text" [(ngModel)]='user.email'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>Password:</ion-label>
+  <ion-input type="text" [(ngModel)]='user.password'></ion-input>
+</ion-item>
+<ion-button (click)="signin()" expand="block"  shape="round">
+  SignIn
+</ion-button>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LogIn</ion-title>
+    <ion-button slot="end" routerLink='/home' shape="round" color='danger'>
+      <ion-icon slot="end" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<br>
+<br>
+<ion-item>
+  <ion-label>Email:</ion-label>
+  <ion-input type="text" [(ngModel)]='email'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>Password:</ion-label>
+  <ion-input type="text" [(ngModel)]='password'></ion-input>
+</ion-item>
+<ion-button (click)="checkLog(email,password)" expand="block"  shape="round">
+  SignIn
+</ion-button>
+</ion-content>

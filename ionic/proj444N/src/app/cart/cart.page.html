@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cart</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <ion-grid *ngIf='dataSrv.cart'>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col><br>Name</ion-col>
+      <ion-col><br>Price</ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row *ngFor='let x of dataSrv.cart; let i=index'>
+      <ion-col><img src='./assets/icon/{{x.photo}}'/></ion-col>
+        <ion-col><br> <h2>{{x.type}}</h2></ion-col>
+          <ion-col><br> <h2>{{x.price}}</h2></ion-col>
+          <ion-col><br><ion-button (click)="deleteItem(i)"  color='danger' shape="round">
+            Delete
+            <ion-icon slot="start" name="trash-outline"></ion-icon>
+          </ion-button></ion-col>
+          
+    </ion-row>
+    </ion-grid>
+    <h2>Total Price <strong></strong></h2>
+    <ion-button (click)="checkOut()" expand="block"  shape="round">
+      Check Out
+    </ion-button>
+    
+</ion-content>
